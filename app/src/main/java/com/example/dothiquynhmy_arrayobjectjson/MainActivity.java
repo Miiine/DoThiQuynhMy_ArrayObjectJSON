@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                     String soluong = objectproduct.getString("quantity");
                     String anh = objectproduct.getString("thumbnail");
 
-                    mangsanpham.add(new JsonConstructors(tieude,gia,soluong,anh));
+                    mangsanpham.add(new JsonConstructors(tieude,"Giá: " + gia,"Số lượng: " + soluong,anh));
                 }
                 customadapter = new Customadapter(MainActivity.this, android.R.layout.simple_list_item_1,mangsanpham);
                 listView.setAdapter(customadapter);
